@@ -1,0 +1,93 @@
+.hero-banner {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-banner-compact {
+  min-height: 50vh;
+}
+
+.hero-banner-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-banner-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(17, 32, 21, 0.82) 0%,
+    rgba(63, 80, 58, 0.7) 50%,
+    rgba(111, 128, 104, 0.5) 100%
+  );
+}
+
+.hero-banner-content {
+  position: relative;
+  z-index: 1;
+  padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-4xl);
+  max-width: 800px;
+}
+
+.hero-banner-content h1 {
+  color: var(--white);
+  margin-bottom: var(--space-lg);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-banner-subtitle {
+  color: rgba(247, 245, 239, 0.9) !important;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 600px;
+}
+
+.hero-banner-actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  flex-wrap: wrap;
+}
+
+.hero-banner-curve {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.hero-banner-curve svg {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    min-height: 60vh;
+  }
+
+  .hero-banner-compact {
+    min-height: 45vh;
+  }
+
+  .hero-banner-content {
+    padding: calc(var(--nav-height) + var(--space-xl)) 0 var(--space-3xl);
+  }
+
+  .hero-banner-subtitle {
+    font-size: 1rem;
+  }
+}

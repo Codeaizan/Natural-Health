@@ -1,0 +1,132 @@
+import { Link } from 'react-router-dom';
+import { FaLeaf, FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaFacebook, FaYoutube, FaWhatsapp } from 'react-icons/fa';
+import logoImg from '../assets/images/logo.png';
+import './Footer.css';
+
+const quickLinks = [
+  { path: '/', label: 'Home' },
+  { path: '/about', label: 'About Us' },
+  { path: '/products', label: 'Products' },
+  { path: '/why-us', label: 'Why Us' },
+  { path: '/testimonials', label: 'Testimonials' },
+  { path: '/book-appointment', label: 'Book Appointment' },
+];
+
+const treatments = [
+  'Asthma Treatment',
+  'Piles & Fistula',
+  'Skin Disorders',
+  'Digestive Issues',
+  'Joint Pain',
+  'Diabetes Management',
+];
+
+export default function Footer() {
+  return (
+    <footer className="footer" id="footer">
+      <div className="footer-wave">
+        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+          <path d="M0 40 C360 80, 720 0, 1080 40 C1260 60, 1380 50, 1440 40 L1440 100 L0 100Z" fill="var(--dark-green)" />
+        </svg>
+      </div>
+
+      <div className="footer-main">
+        <div className="container">
+          <div className="footer-grid">
+            {/* Brand Column */}
+            <div className="footer-brand-col">
+              <Link to="/" className="footer-brand">
+                <div className="footer-logo">
+                  <img src={logoImg} alt="Natural Health World" className="footer-logo-img" />
+                </div>
+                <div>
+                  <h3>Natural Health World</h3>
+                  <span className="footer-tagline">Ayurvedic Wellness</span>
+                </div>
+              </Link>
+              <p className="footer-desc">
+                Rooted in ancient Ayurvedic wisdom and guided by modern science, we bring you natural healing solutions for a healthier, balanced life.
+              </p>
+              <div className="footer-social">
+                <a href="#" className="footer-social-link" id="social-instagram" aria-label="Instagram">
+                  <FaInstagram />
+                </a>
+                <a href="#" className="footer-social-link" id="social-facebook" aria-label="Facebook">
+                  <FaFacebook />
+                </a>
+                <a href="#" className="footer-social-link" id="social-youtube" aria-label="YouTube">
+                  <FaYoutube />
+                </a>
+                <a href="#" className="footer-social-link" id="social-whatsapp" aria-label="WhatsApp">
+                  <FaWhatsapp />
+                </a>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div className="footer-col">
+              <h4>Quick Links</h4>
+              <ul>
+                {quickLinks.map((link) => (
+                  <li key={link.path}>
+                    <Link to={link.path}>{link.label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Treatments */}
+            <div className="footer-col">
+              <h4>Our Treatments</h4>
+              <ul>
+                {treatments.map((t) => (
+                  <li key={t}>
+                    <Link to="/why-us">{t}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Contact */}
+            <div className="footer-col" id="contact">
+              <h4>Contact Us</h4>
+              <div className="footer-contact-list">
+                <div className="footer-contact-item">
+                  <FaMapMarkerAlt className="footer-contact-icon" />
+                  <div>
+                    <p>Natural Health World Clinic</p>
+                    <p className="text-sm">123, Wellness Avenue, Green Park</p>
+                    <p className="text-sm">New Delhi — 110001</p>
+                  </div>
+                </div>
+                <div className="footer-contact-item">
+                  <FaPhone className="footer-contact-icon" />
+                  <div>
+                    <a href="tel:+919876543210">+91 98765 43210</a>
+                  </div>
+                </div>
+                <div className="footer-contact-item">
+                  <FaEnvelope className="footer-contact-icon" />
+                  <div>
+                    <a href="mailto:info@naturalhealthworld.com">info@naturalhealthworld.com</a>
+                  </div>
+                </div>
+              </div>
+              <div className="footer-hours">
+                <p className="text-sm"><strong>Mon – Sat:</strong> 9:00 AM – 7:00 PM</p>
+                <p className="text-sm"><strong>Sunday:</strong> 10:00 AM – 2:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="footer-bottom">
+        <div className="container footer-bottom-inner">
+          <p>&copy; {new Date().getFullYear()} Natural Health World. All rights reserved.</p>
+          <p>Designed with <FaLeaf className="footer-heart" /> for your wellness</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
