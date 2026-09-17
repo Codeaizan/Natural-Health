@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom';
 import { FaLeaf, FaUserMd, FaFlask, FaStar, FaArrowRight, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
-import heroBg from '../assets/images/hero-bg.jpg';
+import heroVideo from '../assets/ChatGPT_Image_Sep_18,_2026,_20260918005456.mp4';
+import neurolaxxVideo from '../assets/Neurolaxx.mp4';
+import thyrelleVideo from '../assets/Thyrelle.mp4';
 import clinicImg from '../assets/images/clinic.jpg';
 import products from '../data/products';
 import testimonials from '../data/testimonials';
@@ -42,7 +44,14 @@ export default function Home() {
       {/* ---- Hero ---- */}
       <section className="home-hero" id="home-hero">
         <div className="home-hero-bg">
-          <img src={heroBg} alt="Ayurvedic herbs and natural remedies" loading="eager" />
+          <video
+            className="home-hero-video"
+            src={heroVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
           <div className="home-hero-overlay" />
         </div>
 
@@ -170,25 +179,86 @@ export default function Home() {
           </AnimatedSection>
 
           <div className="grid-3">
-            {featuredProducts.map((product, i) => (
-              <AnimatedSection key={product.id} delay={i * 0.15}>
-                <div className="product-preview-card card" id={`product-preview-${product.id}`}>
-                  <div className="product-preview-image">
-                    <img src={product.image} alt={product.name} />
-                    {product.badge && <span className="product-badge">{product.badge}</span>}
-                  </div>
-                  <div className="product-preview-info">
-                    <span className="product-category">{product.category}</span>
-                    <h4>{product.name}</h4>
-                    <p>{product.description}</p>
-                    <div className="product-preview-footer">
-                      <span className="product-price">{product.price}</span>
-                      <Link to="/products" className="btn btn-secondary btn-sm">View Details</Link>
-                    </div>
+            {/* Neurolaxx — Video Card */}
+            <AnimatedSection delay={0}>
+              <div className="product-preview-card card product-video-card" id="product-preview-neurolaxx">
+                <div
+                  className="product-preview-image"
+                  onMouseEnter={(e) => e.currentTarget.querySelector('video')?.play()}
+                  onMouseLeave={(e) => { const v = e.currentTarget.querySelector('video'); v?.pause(); v.currentTime = 0; }}
+                >
+                  <video
+                    className="product-preview-vid"
+                    src={neurolaxxVideo}
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  />
+                  <span className="product-badge">Bestseller</span>
+                  <div className="product-video-play-hint">▶ Hover to preview</div>
+                </div>
+                <div className="product-preview-info">
+                  <span className="product-category">Mental Wellness</span>
+                  <h4>Neurolaxx</h4>
+                  <p>Advanced Ayurvedic formulation for neurological wellness, stress relief, and enhanced cognitive function. A natural path to mental clarity.</p>
+                  <div className="product-preview-footer">
+                    <span className="product-price">₹699</span>
+                    <Link to="/products" className="btn btn-secondary btn-sm">View Details</Link>
                   </div>
                 </div>
-              </AnimatedSection>
-            ))}
+              </div>
+            </AnimatedSection>
+
+            {/* Thyrelle — Video Card */}
+            <AnimatedSection delay={0.15}>
+              <div className="product-preview-card card product-video-card" id="product-preview-thyrelle">
+                <div
+                  className="product-preview-image"
+                  onMouseEnter={(e) => e.currentTarget.querySelector('video')?.play()}
+                  onMouseLeave={(e) => { const v = e.currentTarget.querySelector('video'); v?.pause(); v.currentTime = 0; }}
+                >
+                  <video
+                    className="product-preview-vid"
+                    src={thyrelleVideo}
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                  />
+                  <span className="product-badge">Popular</span>
+                  <div className="product-video-play-hint">▶ Hover to preview</div>
+                </div>
+                <div className="product-preview-info">
+                  <span className="product-category">Thyroid Care</span>
+                  <h4>Thyrelle</h4>
+                  <p>Precision-crafted Ayurvedic supplement for thyroid balance and hormonal harmony. Supports healthy metabolism and energy levels naturally.</p>
+                  <div className="product-preview-footer">
+                    <span className="product-price">₹749</span>
+                    <Link to="/products" className="btn btn-secondary btn-sm">View Details</Link>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
+
+            {/* Third product — Image Card (from data) */}
+            <AnimatedSection delay={0.3}>
+              <div className="product-preview-card card" id={`product-preview-${featuredProducts[2].id}`}>
+                <div className="product-preview-image">
+                  <img src={featuredProducts[2].image} alt={featuredProducts[2].name} />
+                  {featuredProducts[2].badge && <span className="product-badge">{featuredProducts[2].badge}</span>}
+                </div>
+                <div className="product-preview-info">
+                  <span className="product-category">{featuredProducts[2].category}</span>
+                  <h4>{featuredProducts[2].name}</h4>
+                  <p>{featuredProducts[2].description}</p>
+                  <div className="product-preview-footer">
+                    <span className="product-price">{featuredProducts[2].price}</span>
+                    <Link to="/products" className="btn btn-secondary btn-sm">View Details</Link>
+                  </div>
+                </div>
+              </div>
+            </AnimatedSection>
           </div>
 
           <AnimatedSection>
