@@ -81,7 +81,6 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
-            <span className="badge home-hero-badge">🌿 Trusted Ayurvedic Care</span>
             <h1>Heal at the Root,<br />Not Just the <span className="text-accent">Symptom</span></h1>
             <p className="home-hero-subtitle">
               Healing through the wisdom of Ayurveda — Natural Health World brings you 
