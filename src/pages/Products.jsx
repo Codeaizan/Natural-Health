@@ -67,7 +67,6 @@ export default function Products() {
                     <h3>{product.name}</h3>
                     <p>{product.description}</p>
                     <div className="product-card-footer">
-                      <span className="product-card-price">{product.price}</span>
                       <button className="btn btn-primary btn-sm" id={`inquire-${product.id}`}>
                         Inquire Now
                       </button>

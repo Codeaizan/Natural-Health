@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { FaLeaf, FaUserMd, FaFlask, FaStar, FaArrowRight, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock } from 'react-icons/fa';
+import { FaLeaf, FaUserMd, FaFlask, FaStar, FaArrowRight, FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaShieldAlt, FaHandHoldingHeart, FaSeedling, FaMicroscope, FaCheckCircle } from 'react-icons/fa';
+import { GiLungs, GiStomach, GiHealing, GiHerbsBundle, GiBrain, GiMedicines } from 'react-icons/gi';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
 import heroVideo from '../assets/ChatGPT_Image_Sep_18,_2026,_20260918005456.mp4';
@@ -8,6 +9,7 @@ import thyrelleVideo from '../assets/Thyrelle.mp4';
 import clinicImg from '../assets/images/clinic.jpg';
 import products from '../data/products';
 import testimonials from '../data/testimonials';
+import treatments from '../data/treatments';
 import './Home.css';
 
 const features = [
@@ -29,10 +31,28 @@ const features = [
 ];
 
 const stats = [
-  { value: '10,000+', label: 'Patients Treated' },
+  { value: '5,000+', label: 'Patients Treated' },
   { value: '15+', label: 'Years Experience' },
   { value: '95%', label: 'Success Rate' },
-  { value: '50+', label: 'Herbal Products' },
+  { value: '60+', label: 'Herbal Products' },
+];
+
+const treatmentIconMap = {
+  lungs: <GiLungs />,
+  healing: <GiHealing />,
+  herbs: <GiHerbsBundle />,
+  stomach: <GiStomach />,
+  medical: <GiMedicines />,
+  medicines: <GiMedicines />,
+  brain: <GiBrain />,
+  leaf: <FaSeedling />,
+};
+
+const whyUsPoints = [
+  { icon: <FaHandHoldingHeart />, title: 'Personalized Care', text: 'Every treatment plan is tailored to your unique body constitution (Prakriti) and health condition.' },
+  { icon: <FaSeedling />, title: 'Root Cause Healing', text: 'We don\'t mask symptoms — we identify and treat the root cause for lasting, natural relief.' },
+  { icon: <FaMicroscope />, title: 'Modern Diagnostics', text: 'Traditional Nadi Pariksha combined with modern lab tests for accurate, effective treatment.' },
+  { icon: <FaShieldAlt />, title: 'Zero Side Effects', text: 'Pure herbal formulations that are safe, gentle, and free from synthetic chemicals.' },
 ];
 
 export default function Home() {
@@ -62,11 +82,11 @@ export default function Home() {
             transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
             <span className="badge home-hero-badge">🌿 Trusted Ayurvedic Care</span>
-            <h1>Healing Through the<br />Wisdom of <span className="text-accent">Ayurveda</span></h1>
+            <h1>Heal at the Root,<br />Not Just the <span className="text-accent">Symptom</span></h1>
             <p className="home-hero-subtitle">
-              Experience the transformative power of ancient Ayurvedic medicine. 
-              Natural Health World brings you holistic healing for body, mind, and spirit 
-              — guided by Dr. Shakir Rashid's expertise.
+              Healing through the wisdom of Ayurveda — Natural Health World brings you 
+              holistic care for body, mind, and spirit, guided by Dr. Shakir Rashid's 
+              15+ years of expertise.
             </p>
             <div className="home-hero-actions">
               <Link to="/book-appointment" className="btn btn-primary btn-lg" id="hero-book-btn">
@@ -167,6 +187,39 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---- Why Us Preview ---- */}
+      <section className="section section-dark" id="why-us-preview">
+        <div className="container">
+          <AnimatedSection>
+            <div className="section-header">
+              <span className="badge" style={{ background: 'rgba(255,255,255,0.15)', color: 'var(--sand)' }}>Why Natural Health World</span>
+              <h2>What Makes Us Different</h2>
+              <p style={{ color: 'rgba(238,236,227,0.7)' }}>We don't just treat diseases — we transform lives through authentic Ayurvedic care</p>
+            </div>
+          </AnimatedSection>
+
+          <div className="grid-4 whyus-preview-grid">
+            {whyUsPoints.map((point, i) => (
+              <AnimatedSection key={i} delay={i * 0.1}>
+                <div className="whyus-preview-card" id={`whyus-point-${i}`}>
+                  <div className="whyus-preview-icon">{point.icon}</div>
+                  <h4>{point.title}</h4>
+                  <p>{point.text}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection>
+            <div className="home-view-all">
+              <Link to="/why-us" className="btn btn-outline" id="whyus-preview-btn">
+                Discover Why Patients Trust Us <FaArrowRight />
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ---- Featured Products ---- */}
       <section className="section" id="featured-products">
         <div className="container">
@@ -203,7 +256,6 @@ export default function Home() {
                   <h4>Neurolaxx</h4>
                   <p>Advanced Ayurvedic formulation for neurological wellness, stress relief, and enhanced cognitive function. A natural path to mental clarity.</p>
                   <div className="product-preview-footer">
-                    <span className="product-price">₹699</span>
                     <Link to="/products" className="btn btn-secondary btn-sm">View Details</Link>
                   </div>
                 </div>
@@ -234,7 +286,6 @@ export default function Home() {
                   <h4>Thyrelle</h4>
                   <p>Precision-crafted Ayurvedic supplement for thyroid balance and hormonal harmony. Supports healthy metabolism and energy levels naturally.</p>
                   <div className="product-preview-footer">
-                    <span className="product-price">₹749</span>
                     <Link to="/products" className="btn btn-secondary btn-sm">View Details</Link>
                   </div>
                 </div>
@@ -253,7 +304,6 @@ export default function Home() {
                   <h4>{featuredProducts[2].name}</h4>
                   <p>{featuredProducts[2].description}</p>
                   <div className="product-preview-footer">
-                    <span className="product-price">{featuredProducts[2].price}</span>
                     <Link to="/products" className="btn btn-secondary btn-sm">View Details</Link>
                   </div>
                 </div>
@@ -265,6 +315,47 @@ export default function Home() {
             <div className="home-view-all">
               <Link to="/products" className="btn btn-primary" id="view-all-products-btn">
                 View All Products <FaArrowRight />
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ---- Special Treatments ---- */}
+      <section className="section section-cream" id="special-treatments">
+        <div className="container">
+          <AnimatedSection>
+            <div className="section-header">
+              <span className="badge">Special Treatments</span>
+              <h2>Conditions We Specialize In</h2>
+              <p>Expert Ayurvedic solutions for chronic and complex health conditions</p>
+            </div>
+          </AnimatedSection>
+
+          <div className="treatments-preview-grid">
+            {treatments.slice(0, 6).map((t, i) => (
+              <AnimatedSection key={t.id} delay={i * 0.08}>
+                <Link to="/why-us#treatments-section" className="treatment-preview-card card" id={`treatment-preview-${t.id}`}>
+                  <div className="treatment-preview-icon">
+                    {treatmentIconMap[t.icon]}
+                  </div>
+                  <div className="treatment-preview-content">
+                    <h4>{t.name}</h4>
+                    <p>{t.description.slice(0, 80)}...</p>
+                    <span className="treatment-preview-rate">
+                      <FaCheckCircle /> {t.successRate} success rate
+                    </span>
+                  </div>
+                  <FaArrowRight className="treatment-preview-arrow" />
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection>
+            <div className="home-view-all">
+              <Link to="/why-us#treatments-section" className="btn btn-primary" id="view-all-treatments-btn">
+                View All Treatments <FaArrowRight />
               </Link>
             </div>
           </AnimatedSection>

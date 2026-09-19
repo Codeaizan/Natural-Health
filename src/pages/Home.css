@@ -277,7 +277,7 @@
 .product-preview-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   margin-top: var(--space-lg);
   padding-top: var(--space-md);
   border-top: 1px solid var(--cream);
@@ -327,6 +327,109 @@
 .home-view-all {
   text-align: center;
   margin-top: var(--space-2xl);
+}
+
+/* ---- Why Us Preview ---- */
+.whyus-preview-card {
+  text-align: center;
+  padding: var(--space-xl);
+}
+
+.whyus-preview-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+  font-size: 1.3rem;
+  color: var(--sand);
+}
+
+.whyus-preview-card h4 {
+  color: var(--white);
+  margin-bottom: var(--space-sm);
+}
+
+.whyus-preview-card p {
+  color: rgba(238, 236, 227, 0.65);
+  font-size: 0.9rem;
+}
+
+/* ---- Special Treatments Preview ---- */
+.treatments-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.treatment-preview-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.treatment-preview-card:hover {
+  border-left: 3px solid var(--primary-green);
+}
+
+.treatment-preview-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--dark-green), var(--primary-green));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.treatment-preview-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.treatment-preview-content h4 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.treatment-preview-content p {
+  color: var(--muted-green);
+  font-size: 0.85rem;
+  margin-bottom: var(--space-xs);
+}
+
+.treatment-preview-rate {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--primary-green);
+  font-weight: 600;
+}
+
+.treatment-preview-arrow {
+  color: var(--sand);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all var(--transition-fast);
+}
+
+.treatment-preview-card:hover .treatment-preview-arrow {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 /* ---- Testimonial Highlight ---- */
@@ -505,6 +608,10 @@
   .contact-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .treatments-preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -531,6 +638,10 @@
   }
 
   .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .treatments-preview-grid {
     grid-template-columns: 1fr;
   }
 }
