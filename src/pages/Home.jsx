@@ -157,7 +157,7 @@ export default function Home() {
                   <FaUserMd />
                   <div>
                     <strong>Dr. Shakir Rashid</strong>
-                    <span>Ayurvedic Physician</span>
+                    <span>Consultant Physician</span>
                   </div>
                 </div>
               </div>
@@ -420,7 +420,7 @@ export default function Home() {
                   <Link to="/book-appointment" className="btn btn-primary btn-lg" id="cta-book-btn">
                     Book Your Appointment <FaArrowRight />
                   </Link>
-                  <a href="tel:+919876543210" className="btn btn-secondary btn-lg" id="cta-call-btn">
+                  <a href="tel:+919143746966" className="btn btn-secondary btn-lg" id="cta-call-btn">
                     <FaPhone /> Call Now
                   </a>
                 </div>
@@ -465,8 +465,8 @@ export default function Home() {
                   <FaPhone />
                 </div>
                 <h4>Phone</h4>
-                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
-                <p><a href="tel:+919876543211">+91 98765 43211</a></p>
+                <p><a href="tel:+919143746966">+91 91437 46966</a></p>
+                <p><a href="tel:+918240207673">+91 82402 07673</a></p>
               </div>
             </AnimatedSection>
 
@@ -476,8 +476,8 @@ export default function Home() {
                   <FaEnvelope />
                 </div>
                 <h4>Email</h4>
-                <p><a href="mailto:info@naturalhealthworld.com">info@naturalhealthworld.com</a></p>
-                <p><a href="mailto:appointments@naturalhealthworld.com">appointments@nhw.com</a></p>
+                <p><a href="mailto:skr.nhw@gmail.com">skr.nhw@gmail.com</a></p>
+                <p><a href="https://instagram.com/naturalhealthworld" target="_blank" rel="noopener noreferrer">@naturalhealthworld</a></p>
               </div>
             </AnimatedSection>
 
@@ -486,9 +486,9 @@ export default function Home() {
                 <div className="contact-card-icon">
                   <FaClock />
                 </div>
-                <h4>Working Hours</h4>
-                <p><strong>Mon – Sat:</strong> 9:00 AM – 7:00 PM</p>
-                <p><strong>Sunday:</strong> 10:00 AM – 2:00 PM</p>
+                <h4>Visiting Hours</h4>
+                <p><strong>Mon – Sat:</strong> 12–2 PM & 6:30–8:30 PM</p>
+                <p><strong>Sunday:</strong> 11 AM – 2 PM</p>
               </div>
             </AnimatedSection>
           </div>

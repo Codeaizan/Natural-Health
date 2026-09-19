@@ -92,29 +92,29 @@ export default function Footer() {
               <h4>Contact Us</h4>
               <div className="footer-contact-list">
                 <div className="footer-contact-item">
-                  <FaMapMarkerAlt className="footer-contact-icon" />
-                  <div>
-                    <p>Natural Health World Clinic</p>
-                    <p className="text-sm">123, Wellness Avenue, Green Park</p>
-                    <p className="text-sm">New Delhi — 110001</p>
-                  </div>
-                </div>
-                <div className="footer-contact-item">
                   <FaPhone className="footer-contact-icon" />
                   <div>
-                    <a href="tel:+919876543210">+91 98765 43210</a>
+                    <a href="tel:+919143746966">+91 91437 46966</a>
+                    <br />
+                    <a href="tel:+918240207673">+91 82402 07673</a>
                   </div>
                 </div>
                 <div className="footer-contact-item">
                   <FaEnvelope className="footer-contact-icon" />
                   <div>
-                    <a href="mailto:info@naturalhealthworld.com">info@naturalhealthworld.com</a>
+                    <a href="mailto:skr.nhw@gmail.com">skr.nhw@gmail.com</a>
+                  </div>
+                </div>
+                <div className="footer-contact-item">
+                  <FaInstagram className="footer-contact-icon" />
+                  <div>
+                    <a href="https://instagram.com/naturalhealthworld" target="_blank" rel="noopener noreferrer">@naturalhealthworld</a>
                   </div>
                 </div>
               </div>
               <div className="footer-hours">
-                <p className="text-sm"><strong>Mon – Sat:</strong> 9:00 AM – 7:00 PM</p>
-                <p className="text-sm"><strong>Sunday:</strong> 10:00 AM – 2:00 PM</p>
+                <p className="text-sm"><strong>Mon – Sat:</strong> 12:00 PM – 2:00 PM &amp; 6:30 PM – 8:30 PM</p>
+                <p className="text-sm"><strong>Sunday:</strong> 11:00 AM – 2:00 PM</p>
               </div>
             </div>
           </div>

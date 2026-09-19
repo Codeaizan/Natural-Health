@@ -45,7 +45,7 @@ export default function About() {
               <div className="doctor-content">
                 <span className="badge">Meet the Expert</span>
                 <h2>Dr. Shakir Rashid</h2>
-                <p className="doctor-title-sub">BAMS, MD (Ayurveda) • Ayurvedic Physician & Founder</p>
+                <p className="doctor-title-sub">RUMP (State Council of Unani Medicine, West Bengal, Kolkata) • Consultant Physician of Ayurvedic & Unani Medicine</p>
 
                 <p>
                   Dr. Shakir Rashid is a passionate Ayurvedic physician with over 15 years of 

@@ -267,24 +267,24 @@ export default function BookAppointment() {
                   <h3>Clinic Information</h3>
                   <div className="booking-info-items">
                     <div className="booking-info-item">
-                      <FaMapMarkerAlt />
-                      <div>
-                        <strong>Address</strong>
-                        <p>123, Wellness Avenue, Green Park<br />New Delhi — 110001</p>
-                      </div>
-                    </div>
-                    <div className="booking-info-item">
                       <FaPhone />
                       <div>
                         <strong>Phone</strong>
-                        <p>+91 98765 43210</p>
+                        <p>+91 91437 46966<br />+91 82402 07673</p>
+                      </div>
+                    </div>
+                    <div className="booking-info-item">
+                      <FaEnvelope />
+                      <div>
+                        <strong>Email</strong>
+                        <p>skr.nhw@gmail.com</p>
                       </div>
                     </div>
                     <div className="booking-info-item">
                       <FaClock />
                       <div>
-                        <strong>Working Hours</strong>
-                        <p>Mon–Sat: 9 AM – 7 PM<br />Sunday: 10 AM – 2 PM</p>
+                        <strong>Visiting Hours</strong>
+                        <p>Mon–Sat: 12–2 PM & 6:30–8:30 PM<br />Sunday: 11 AM – 2 PM</p>
                       </div>
                     </div>
                   </div>
