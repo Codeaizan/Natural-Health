@@ -220,6 +220,47 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---- Special Treatments ---- */}
+      <section className="section section-cream" id="special-treatments">
+        <div className="container">
+          <AnimatedSection>
+            <div className="section-header">
+              <span className="badge">Special Treatments</span>
+              <h2>Conditions We Specialize In</h2>
+              <p>Expert Ayurvedic solutions for chronic and complex health conditions</p>
+            </div>
+          </AnimatedSection>
+
+          <div className="treatments-preview-grid">
+            {treatments.slice(0, 6).map((t, i) => (
+              <AnimatedSection key={t.id} delay={i * 0.08}>
+                <Link to="/why-us#treatments-section" className="treatment-preview-card card" id={`treatment-preview-${t.id}`}>
+                  <div className="treatment-preview-icon">
+                    {treatmentIconMap[t.icon]}
+                  </div>
+                  <div className="treatment-preview-content">
+                    <h4>{t.name}</h4>
+                    <p>{t.description.slice(0, 80)}...</p>
+                    <span className="treatment-preview-rate">
+                      <FaCheckCircle /> {t.successRate} success rate
+                    </span>
+                  </div>
+                  <FaArrowRight className="treatment-preview-arrow" />
+                </Link>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          <AnimatedSection>
+            <div className="home-view-all">
+              <Link to="/why-us#treatments-section" className="btn btn-primary" id="view-all-treatments-btn">
+                View All Treatments <FaArrowRight />
+              </Link>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* ---- Featured Products ---- */}
       <section className="section" id="featured-products">
         <div className="container">
@@ -315,47 +356,6 @@ export default function Home() {
             <div className="home-view-all">
               <Link to="/products" className="btn btn-primary" id="view-all-products-btn">
                 View All Products <FaArrowRight />
-              </Link>
-            </div>
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* ---- Special Treatments ---- */}
-      <section className="section section-cream" id="special-treatments">
-        <div className="container">
-          <AnimatedSection>
-            <div className="section-header">
-              <span className="badge">Special Treatments</span>
-              <h2>Conditions We Specialize In</h2>
-              <p>Expert Ayurvedic solutions for chronic and complex health conditions</p>
-            </div>
-          </AnimatedSection>
-
-          <div className="treatments-preview-grid">
-            {treatments.slice(0, 6).map((t, i) => (
-              <AnimatedSection key={t.id} delay={i * 0.08}>
-                <Link to="/why-us#treatments-section" className="treatment-preview-card card" id={`treatment-preview-${t.id}`}>
-                  <div className="treatment-preview-icon">
-                    {treatmentIconMap[t.icon]}
-                  </div>
-                  <div className="treatment-preview-content">
-                    <h4>{t.name}</h4>
-                    <p>{t.description.slice(0, 80)}...</p>
-                    <span className="treatment-preview-rate">
-                      <FaCheckCircle /> {t.successRate} success rate
-                    </span>
-                  </div>
-                  <FaArrowRight className="treatment-preview-arrow" />
-                </Link>
-              </AnimatedSection>
-            ))}
-          </div>
-
-          <AnimatedSection>
-            <div className="home-view-all">
-              <Link to="/why-us#treatments-section" className="btn btn-primary" id="view-all-treatments-btn">
-                View All Treatments <FaArrowRight />
               </Link>
             </div>
           </AnimatedSection>

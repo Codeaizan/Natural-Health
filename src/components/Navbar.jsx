@@ -7,8 +7,8 @@ import './Navbar.css';
 const navLinks = [
   { path: '/', label: 'Home' },
   { path: '/about', label: 'About Us' },
-  { path: '/products', label: 'Products' },
   { path: '/why-us', label: 'Why Us' },
+  { path: '/products', label: 'Products' },
   { path: '/testimonials', label: 'Testimonials' },
 ];
 

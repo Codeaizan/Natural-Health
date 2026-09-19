@@ -46,6 +46,12 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+  filter: drop-shadow(0 1px 3px rgba(0,0,0,0.3));
+  transition: filter var(--transition-base);
+}
+
+.navbar-scrolled .navbar-logo-img {
+  filter: none;
 }
 
 .navbar-brand-text {
@@ -57,16 +63,28 @@
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 1.15rem;
-  color: var(--heading-color);
+  color: var(--white);
   line-height: 1.2;
+  transition: color var(--transition-base);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.navbar-scrolled .navbar-brand-name {
+  color: var(--heading-color);
+  text-shadow: none;
 }
 
 .navbar-brand-tagline {
   font-size: 0.7rem;
-  color: var(--primary-green);
+  color: rgba(255,255,255,0.75);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-weight: 500;
+  transition: color var(--transition-base);
+}
+
+.navbar-scrolled .navbar-brand-tagline {
+  color: var(--primary-green);
 }
 
 /* Links */
@@ -81,20 +99,36 @@
   border-radius: var(--radius-full);
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--charcoal);
+  color: rgba(255,255,255,0.9);
   transition: all var(--transition-fast);
   position: relative;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.navbar-scrolled .navbar-link {
+  color: var(--charcoal);
+  text-shadow: none;
 }
 
 .navbar-link:hover {
+  color: var(--white);
+  background: rgba(255,255,255,0.15);
+}
+
+.navbar-scrolled .navbar-link:hover {
   color: var(--dark-green);
   background: var(--primary-green-light);
 }
 
 .navbar-link-active {
+  color: var(--white);
+  background: rgba(255,255,255,0.2);
+  font-weight: 600;
+}
+
+.navbar-scrolled .navbar-link-active {
   color: var(--dark-green);
   background: var(--primary-green-light);
-  font-weight: 600;
 }
 
 .navbar-cta {
@@ -105,9 +139,14 @@
 .navbar-toggle {
   display: none;
   font-size: 1.5rem;
-  color: var(--charcoal);
+  color: var(--white);
   z-index: 1001;
   padding: var(--space-sm);
+  transition: color var(--transition-base);
+}
+
+.navbar-scrolled .navbar-toggle {
+  color: var(--charcoal);
 }
 
 /* Mobile */
@@ -137,9 +176,22 @@
     visibility: visible;
   }
 
-  .navbar-link {
+  .navbar-link,
+  .navbar-links-open .navbar-link {
     font-size: 1.2rem;
     padding: 12px 24px;
+    color: var(--charcoal);
+    text-shadow: none;
+  }
+
+  .navbar-links-open .navbar-link:hover {
+    color: var(--dark-green);
+    background: var(--primary-green-light);
+  }
+
+  .navbar-links-open .navbar-link-active {
+    color: var(--dark-green);
+    background: var(--primary-green-light);
   }
 
   .navbar-cta {
