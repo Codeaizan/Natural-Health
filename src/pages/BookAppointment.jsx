@@ -285,8 +285,6 @@ export default function BookAppointment() {
                         <strong>Email</strong>
                         <p>naturalhealthworld99@gmail.com</p>
                       </div>
-                    </div>
-                    </div>
                   </div>
                 </div>
 
