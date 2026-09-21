@@ -6,9 +6,8 @@ import clinicImg from '../assets/images/clinic.jpg';
 import './BookAppointment.css';
 
 const timeSlots = [
-  '9:00 AM', '9:30 AM', '10:00 AM', '10:30 AM', '11:00 AM', '11:30 AM',
-  '12:00 PM', '2:00 PM', '2:30 PM', '3:00 PM', '3:30 PM', '4:00 PM',
-  '4:30 PM', '5:00 PM', '5:30 PM', '6:00 PM', '6:30 PM',
+  '11:00 AM', '11:30 AM', '12:00 PM', '2:00 PM', '2:30 PM', '3:00 PM',
+  '3:30 PM', '4:00 PM', '4:30 PM', '5:00 PM', '5:30 PM', '6:00 PM', '6:30 PM',
 ];
 
 const faqs = [
@@ -287,12 +286,6 @@ export default function BookAppointment() {
                         <p>naturalhealthworld99@gmail.com</p>
                       </div>
                     </div>
-                    <div className="booking-info-item">
-                      <FaClock />
-                      <div>
-                        <strong>Visiting Hours</strong>
-                        <p>Mon–Sat: 12–2 PM & 6:30–8:30 PM<br />Sunday: 11 AM – 2 PM</p>
-                      </div>
                     </div>
                   </div>
                 </div>

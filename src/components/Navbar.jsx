@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
-import logoImg from '../assets/images/logo.png';
+import logoImg from '../assets/images/logo.jpg';
 import './Navbar.css';
 
 const navLinks = [

@@ -17,7 +17,7 @@ const features = [
   {
     icon: <FaLeaf />,
     title: '100% Natural Remedies',
-    description: 'Pure Ayurvedic formulations crafted from hand-selected herbs — no chemicals, no side effects.',
+    description: '100% natural card: pure ayurvedic formulation crafted from hand selected herbs from across the world',
   },
   {
     icon: <FaUserMd />,
@@ -253,8 +253,8 @@ export default function Home() {
           </AnimatedSection>
 
           <div className="treatments-preview-grid">
-            {treatments.slice(0, 7).map((t, i) => (
-              <AnimatedSection key={t.id} delay={i * 0.08}>
+            {treatments.slice(0, 6).map((t, i) => (
+              <AnimatedSection key={t.id} delay={i * 0.1}>
                 <Link to="/why-us#treatments-section" className="treatment-preview-card card" id={`treatment-preview-${t.id}`}>
                   <div className="treatment-preview-icon">
                     {treatmentIconMap[t.icon]}
@@ -487,17 +487,6 @@ export default function Home() {
                 <h4>Email & Social</h4>
                 <p><a href="mailto:naturalhealthworld99@gmail.com">naturalhealthworld99@gmail.com</a></p>
                 <p><a href="https://instagram.com/naturalhealthworldkolkata" target="_blank" rel="noopener noreferrer">@naturalhealthworldkolkata</a></p>
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.3}>
-              <div className="contact-card card" id="contact-hours">
-                <div className="contact-card-icon">
-                  <FaClock />
-                </div>
-                <h4>Visiting Hours</h4>
-                <p><strong>Mon – Sat:</strong> 12–2 PM & 6:30–8:30 PM</p>
-                <p><strong>Sunday:</strong> 11 AM – 2 PM</p>
               </div>
             </AnimatedSection>
           </div>

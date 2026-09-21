@@ -56,15 +56,6 @@ const treatments = [
     successRate: '80%',
     symptoms: ['Hormonal imbalance', 'Low vitality', 'Reproductive concerns', 'Stress-related issues'],
   },
-  {
-    id: 7,
-    name: 'Migraine & Headache Disorders',
-    icon: 'brain',
-    description: 'Chronic migraines, tension headaches, and cluster headaches treated through Ayurvedic neurological therapies and herbal remedies.',
-    approach: 'Shirodhara therapy combined with Brahmi, Jatamansi, and Pathyadi Kwath formulations to address the root triggers of migraines — from stress to Pitta imbalance — for lasting relief.',
-    successRate: '78%',
-    symptoms: ['Recurring headaches', 'Light sensitivity', 'Nausea with headache', 'Throbbing pain'],
-  },
 ];
 
 export default treatments;

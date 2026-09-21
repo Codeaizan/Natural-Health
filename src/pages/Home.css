@@ -140,6 +140,18 @@
   margin-bottom: var(--space-sm);
 }
 
+#feature-card-0 {
+  background-color: var(--warm-ivory);
+}
+
+#feature-card-1 {
+  background-color: var(--cream);
+}
+
+#feature-card-2 {
+  background-color: #f1f4ec;
+}
+
 .feature-card p {
   color: var(--muted-green);
   font-size: 0.95rem;

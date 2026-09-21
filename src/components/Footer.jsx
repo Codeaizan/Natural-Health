@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaLeaf, FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaFacebook, FaYoutube, FaWhatsapp } from 'react-icons/fa';
-import logoImg from '../assets/images/logo.png';
+import logoImg from '../assets/images/logo.jpg';
 import './Footer.css';
 
 const quickLinks = [
@@ -20,6 +20,9 @@ const treatments = [
   'Diabetes Management',
   'Intimate Health',
   'Migraine',
+  'Skin Disorders',
+  'Digestive Issues',
+  'Respiratory Care',
 ];
 
 export default function Footer() {
@@ -114,9 +117,6 @@ export default function Footer() {
                   </div>
                 </div>
               </div>
-              <div className="footer-hours">
-                <p className="text-sm"><strong>Mon – Sat:</strong> 12:00 PM – 2:00 PM &amp; 6:30 PM – 8:30 PM</p>
-                <p className="text-sm"><strong>Sunday:</strong> 11:00 AM – 2:00 PM</p>
               </div>
             </div>
           </div>
