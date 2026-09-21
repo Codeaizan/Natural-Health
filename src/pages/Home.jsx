@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
 import heroVideo from '../assets/ChatGPT_Image_Sep_18,_2026,_20260918005456.mp4';
 import neurolaxxVideo from '../assets/Neurolaxx.mp4';
+import clinicTourVideo from '../assets/Clinic_walkthrough_video_tour_1080p_20260921124708.mp4';
 import clinicImg from '../assets/images/clinic.jpg';
 import doctorImg from '../assets/images/doctor-shakir.jpg';
 import products from '../data/products';
@@ -182,6 +183,31 @@ export default function Home() {
               </div>
             </AnimatedSection>
           </div>
+        </div>
+      </section>
+
+      {/* ---- Clinic Tour Video ---- */}
+      <section className="clinic-tour-section" id="clinic-tour">
+        <div className="clinic-tour-video-wrap">
+          <video
+            className="clinic-tour-video"
+            src={clinicTourVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+          <div className="clinic-tour-overlay" />
+        </div>
+        <div className="container clinic-tour-content">
+          <AnimatedSection>
+            <span className="badge" style={{ background: 'rgba(255,255,255,0.18)', color: '#fff' }}>Step Inside</span>
+            <h2>Experience Our Clinic</h2>
+            <p>A warm, healing space where ancient Ayurvedic tradition meets modern comfort — take a virtual walk through Natural Health World.</p>
+            <Link to="/book-appointment" className="btn btn-primary btn-lg" id="clinic-tour-btn">
+              Book a Visit <FaArrowRight />
+            </Link>
+          </AnimatedSection>
         </div>
       </section>
 
