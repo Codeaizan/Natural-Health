@@ -15,10 +15,11 @@ const quickLinks = [
 const treatments = [
   'Asthma Treatment',
   'Piles & Fistula',
-  'Skin Disorders',
-  'Digestive Issues',
+  'Kidney & Urinary',
   'Joint Pain',
   'Diabetes Management',
+  'Intimate Health',
+  'Migraine',
 ];
 
 export default function Footer() {
@@ -48,16 +49,16 @@ export default function Footer() {
                 Rooted in ancient Ayurvedic wisdom and guided by modern science, we bring you natural healing solutions for a healthier, balanced life.
               </p>
               <div className="footer-social">
-                <a href="#" className="footer-social-link" id="social-instagram" aria-label="Instagram">
+                <a href="https://instagram.com/naturalhealthworldkolkata" target="_blank" rel="noopener noreferrer" className="footer-social-link" id="social-instagram" aria-label="Instagram">
                   <FaInstagram />
                 </a>
-                <a href="#" className="footer-social-link" id="social-facebook" aria-label="Facebook">
+                <a href="https://facebook.com/naturalhealthworldkolkata" target="_blank" rel="noopener noreferrer" className="footer-social-link" id="social-facebook" aria-label="Facebook">
                   <FaFacebook />
                 </a>
-                <a href="#" className="footer-social-link" id="social-youtube" aria-label="YouTube">
+                <a href="https://youtube.com/@naturalhealthworldkolkata" target="_blank" rel="noopener noreferrer" className="footer-social-link" id="social-youtube" aria-label="YouTube">
                   <FaYoutube />
                 </a>
-                <a href="#" className="footer-social-link" id="social-whatsapp" aria-label="WhatsApp">
+                <a href="https://wa.me/919007697503" target="_blank" rel="noopener noreferrer" className="footer-social-link" id="social-whatsapp" aria-label="WhatsApp">
                   <FaWhatsapp />
                 </a>
               </div>
@@ -92,23 +93,24 @@ export default function Footer() {
               <h4>Contact Us</h4>
               <div className="footer-contact-list">
                 <div className="footer-contact-item">
+                  <FaMapMarkerAlt className="footer-contact-icon" />
+                  <div>
+                    <p>4, Circus Range, Near Mithai</p>
+                    <p className="text-sm">Beck Bagan, Kolkata — 700019</p>
+                  </div>
+                </div>
+                <div className="footer-contact-item">
                   <FaPhone className="footer-contact-icon" />
                   <div>
-                    <a href="tel:+919143746966">+91 91437 46966</a>
+                    <a href="tel:+919007697503">+91 90076 97503</a>
                     <br />
-                    <a href="tel:+918240207673">+91 82402 07673</a>
+                    <a href="tel:+919143746966">+91 91437 46966</a>
                   </div>
                 </div>
                 <div className="footer-contact-item">
                   <FaEnvelope className="footer-contact-icon" />
                   <div>
-                    <a href="mailto:skr.nhw@gmail.com">skr.nhw@gmail.com</a>
-                  </div>
-                </div>
-                <div className="footer-contact-item">
-                  <FaInstagram className="footer-contact-icon" />
-                  <div>
-                    <a href="https://instagram.com/naturalhealthworld" target="_blank" rel="noopener noreferrer">@naturalhealthworld</a>
+                    <a href="mailto:naturalhealthworld99@gmail.com">naturalhealthworld99@gmail.com</a>
                   </div>
                 </div>
               </div>

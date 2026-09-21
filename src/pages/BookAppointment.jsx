@@ -267,17 +267,24 @@ export default function BookAppointment() {
                   <h3>Clinic Information</h3>
                   <div className="booking-info-items">
                     <div className="booking-info-item">
+                      <FaMapMarkerAlt />
+                      <div>
+                        <strong>Address</strong>
+                        <p>4, Circus Range, Near Mithai<br />Beck Bagan, Kolkata — 700019</p>
+                      </div>
+                    </div>
+                    <div className="booking-info-item">
                       <FaPhone />
                       <div>
                         <strong>Phone</strong>
-                        <p>+91 91437 46966<br />+91 82402 07673</p>
+                        <p>+91 90076 97503<br />+91 91437 46966</p>
                       </div>
                     </div>
                     <div className="booking-info-item">
                       <FaEnvelope />
                       <div>
                         <strong>Email</strong>
-                        <p>skr.nhw@gmail.com</p>
+                        <p>naturalhealthworld99@gmail.com</p>
                       </div>
                     </div>
                     <div className="booking-info-item">

@@ -5,7 +5,6 @@ import { motion } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
 import heroVideo from '../assets/ChatGPT_Image_Sep_18,_2026,_20260918005456.mp4';
 import neurolaxxVideo from '../assets/Neurolaxx.mp4';
-import thyrelleVideo from '../assets/Thyrelle.mp4';
 import clinicImg from '../assets/images/clinic.jpg';
 import products from '../data/products';
 import testimonials from '../data/testimonials';
@@ -83,9 +82,8 @@ export default function Home() {
           >
             <h1>Heal at the Root,<br />Not Just the <span className="text-accent">Symptom</span></h1>
             <p className="home-hero-subtitle">
-              Healing through the wisdom of Ayurveda — Natural Health World brings you 
-              holistic care for body, mind, and spirit, guided by Dr. Shakir Rashid's 
-              15+ years of expertise.
+              Pure Ayurvedic formulations crafted from hand-selected herbs{' '}
+              <span className="text-accent">from across the world</span>.
             </p>
             <div className="home-hero-actions">
               <Link to="/book-appointment" className="btn btn-primary btn-lg" id="hero-book-btn">
@@ -231,7 +229,7 @@ export default function Home() {
           </AnimatedSection>
 
           <div className="treatments-preview-grid">
-            {treatments.slice(0, 6).map((t, i) => (
+            {treatments.slice(0, 7).map((t, i) => (
               <AnimatedSection key={t.id} delay={i * 0.08}>
                 <Link to="/why-us#treatments-section" className="treatment-preview-card card" id={`treatment-preview-${t.id}`}>
                   <div className="treatment-preview-icon">
@@ -302,29 +300,17 @@ export default function Home() {
               </div>
             </AnimatedSection>
 
-            {/* Thyrelle — Video Card */}
+            {/* Karishmai Oil — Image Card (from data) */}
             <AnimatedSection delay={0.15}>
-              <div className="product-preview-card card product-video-card" id="product-preview-thyrelle">
-                <div
-                  className="product-preview-image"
-                  onMouseEnter={(e) => e.currentTarget.querySelector('video')?.play()}
-                  onMouseLeave={(e) => { const v = e.currentTarget.querySelector('video'); v?.pause(); v.currentTime = 0; }}
-                >
-                  <video
-                    className="product-preview-vid"
-                    src={thyrelleVideo}
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                  />
-                  <span className="product-badge">Popular</span>
-                  <div className="product-video-play-hint">▶ Hover to preview</div>
+              <div className="product-preview-card card" id={`product-preview-${featuredProducts[0].id}`}>
+                <div className="product-preview-image">
+                  <img src={featuredProducts[0].image} alt={featuredProducts[0].name} />
+                  {featuredProducts[0].badge && <span className="product-badge">{featuredProducts[0].badge}</span>}
                 </div>
                 <div className="product-preview-info">
-                  <span className="product-category">Thyroid Care</span>
-                  <h4>Thyrelle</h4>
-                  <p>Precision-crafted Ayurvedic supplement for thyroid balance and hormonal harmony. Supports healthy metabolism and energy levels naturally.</p>
+                  <span className="product-category">{featuredProducts[0].category}</span>
+                  <h4>{featuredProducts[0].name}</h4>
+                  <p>{featuredProducts[0].description}</p>
                   <div className="product-preview-footer">
                     <Link to="/products" className="btn btn-secondary btn-sm">View Details</Link>
                   </div>
@@ -332,17 +318,17 @@ export default function Home() {
               </div>
             </AnimatedSection>
 
-            {/* Third product — Image Card (from data) */}
+            {/* Diabo Guard — Image Card (from data) */}
             <AnimatedSection delay={0.3}>
-              <div className="product-preview-card card" id={`product-preview-${featuredProducts[2].id}`}>
+              <div className="product-preview-card card" id={`product-preview-${featuredProducts[1].id}`}>
                 <div className="product-preview-image">
-                  <img src={featuredProducts[2].image} alt={featuredProducts[2].name} />
-                  {featuredProducts[2].badge && <span className="product-badge">{featuredProducts[2].badge}</span>}
+                  <img src={featuredProducts[1].image} alt={featuredProducts[1].name} />
+                  {featuredProducts[1].badge && <span className="product-badge">{featuredProducts[1].badge}</span>}
                 </div>
                 <div className="product-preview-info">
-                  <span className="product-category">{featuredProducts[2].category}</span>
-                  <h4>{featuredProducts[2].name}</h4>
-                  <p>{featuredProducts[2].description}</p>
+                  <span className="product-category">{featuredProducts[1].category}</span>
+                  <h4>{featuredProducts[1].name}</h4>
+                  <p>{featuredProducts[1].description}</p>
                   <div className="product-preview-footer">
                     <Link to="/products" className="btn btn-secondary btn-sm">View Details</Link>
                   </div>
@@ -419,7 +405,7 @@ export default function Home() {
                   <Link to="/book-appointment" className="btn btn-primary btn-lg" id="cta-book-btn">
                     Book Your Appointment <FaArrowRight />
                   </Link>
-                  <a href="tel:+919143746966" className="btn btn-secondary btn-lg" id="cta-call-btn">
+                  <a href="tel:+919007697503" className="btn btn-secondary btn-lg" id="cta-call-btn">
                     <FaPhone /> Call Now
                   </a>
                 </div>
@@ -453,8 +439,8 @@ export default function Home() {
                 </div>
                 <h4>Our Location</h4>
                 <p>Natural Health World Clinic</p>
-                <p>123, Wellness Avenue, Green Park</p>
-                <p>New Delhi — 110001</p>
+                <p>4, Circus Range, Near Mithai</p>
+                <p>Beck Bagan, Kolkata — 700019</p>
               </div>
             </AnimatedSection>
 
@@ -464,8 +450,8 @@ export default function Home() {
                   <FaPhone />
                 </div>
                 <h4>Phone</h4>
+                <p><a href="tel:+919007697503">+91 90076 97503</a></p>
                 <p><a href="tel:+919143746966">+91 91437 46966</a></p>
-                <p><a href="tel:+918240207673">+91 82402 07673</a></p>
               </div>
             </AnimatedSection>
 
@@ -474,9 +460,9 @@ export default function Home() {
                 <div className="contact-card-icon">
                   <FaEnvelope />
                 </div>
-                <h4>Email</h4>
-                <p><a href="mailto:skr.nhw@gmail.com">skr.nhw@gmail.com</a></p>
-                <p><a href="https://instagram.com/naturalhealthworld" target="_blank" rel="noopener noreferrer">@naturalhealthworld</a></p>
+                <h4>Email & Social</h4>
+                <p><a href="mailto:naturalhealthworld99@gmail.com">naturalhealthworld99@gmail.com</a></p>
+                <p><a href="https://instagram.com/naturalhealthworldkolkata" target="_blank" rel="noopener noreferrer">@naturalhealthworldkolkata</a></p>
               </div>
             </AnimatedSection>
 
