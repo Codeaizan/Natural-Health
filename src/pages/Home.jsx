@@ -127,7 +127,7 @@ export default function Home() {
             <div className="section-header">
               <span className="badge">Why Choose Ayurveda</span>
               <h2>Ancient Wisdom, Modern Healing</h2>
-              <p>We blend 5,000 years of Ayurvedic knowledge with contemporary diagnostic methods to provide you the best of both worlds.</p>
+              <p>We blend 5,000 years of Ayurvedic science with contemporary diagnostic methods to provide you the best of both worlds.</p>
             </div>
           </AnimatedSection>
 
