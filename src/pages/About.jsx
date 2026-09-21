@@ -11,7 +11,7 @@ const milestones = [
   { year: '2012', title: 'Clinic Founded', description: 'Natural Health World was established with a vision to make authentic Ayurvedic treatment accessible to everyone. Started with a small clinic and a big dream.', icon: <FaLeaf /> },
   { year: '2016', title: 'Product Line Launch', description: 'Launched our own range of premium Ayurvedic formulations, handcrafted with herbs sourced from trusted organic farms across India.', icon: <FaHeartbeat /> },
   { year: '2020', title: 'Recognition', description: 'Received the Excellence in Ayurvedic Practice award. Expanded to online consultations, helping patients across India and abroad.', icon: <FaAward /> },
-  { year: '2024', title: '10,000+ Patients', description: 'Crossed the milestone of treating over 10,000 patients. Expanded clinic with modern diagnostic facilities while keeping Ayurvedic traditions alive.', icon: <FaUsers /> },
+  { year: '2024', title: '5,000+ Patients', description: 'Crossed the milestone of treating over 5,000 patients. Expanded clinic with modern diagnostic facilities while keeping Ayurvedic traditions alive.', icon: <FaUsers /> },
 ];
 
 const values = [
@@ -78,11 +78,11 @@ export default function About() {
                     <span>Years Experience</span>
                   </div>
                   <div className="doctor-stat">
-                    <strong>10,000+</strong>
+                    <strong>5,000+</strong>
                     <span>Patients Healed</span>
                   </div>
                   <div className="doctor-stat">
-                    <strong>50+</strong>
+                    <strong>60+</strong>
                     <span>Herbal Products</span>
                   </div>
                 </div>
