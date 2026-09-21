@@ -6,6 +6,7 @@ import AnimatedSection from '../components/AnimatedSection';
 import heroVideo from '../assets/ChatGPT_Image_Sep_18,_2026,_20260918005456.mp4';
 import neurolaxxVideo from '../assets/Neurolaxx.mp4';
 import clinicImg from '../assets/images/clinic.jpg';
+import doctorImg from '../assets/images/doctor-shakir.jpg';
 import products from '../data/products';
 import testimonials from '../data/testimonials';
 import treatments from '../data/treatments';
@@ -149,7 +150,7 @@ export default function Home() {
           <div className="about-preview-grid">
             <AnimatedSection direction="left">
               <div className="about-preview-image">
-                <img src={clinicImg} alt="Natural Health World Clinic" />
+                <img src={doctorImg} alt="Dr. Shakir Rashid" />
                 <div className="about-preview-badge glass-card">
                   <FaUserMd />
                   <div>

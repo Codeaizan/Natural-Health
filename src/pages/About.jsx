@@ -2,7 +2,7 @@ import { FaGraduationCap, FaAward, FaHeartbeat, FaUsers, FaLeaf, FaBookOpen } fr
 import HeroBanner from '../components/HeroBanner';
 import AnimatedSection from '../components/AnimatedSection';
 import clinicImg from '../assets/images/clinic.jpg';
-import doctorImg from '../assets/images/doctor.jpg';
+import doctorImg from '../assets/images/doctor-shakir.jpg';
 import './About.css';
 
 const milestones = [
