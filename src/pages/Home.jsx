@@ -3,7 +3,7 @@ import { FaLeaf, FaUserMd, FaFlask, FaStar, FaArrowRight, FaPhone, FaEnvelope, F
 import { GiLungs, GiStomach, GiHealing, GiHerbsBundle, GiBrain, GiMedicines } from 'react-icons/gi';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
-import heroVideo from '../assets/ChatGPT_Image_Sep_18,_2026,_20260918005456.mp4';
+import heroImg from '../assets/images/home-hero.jpg';
 import neurolaxxVideo from '../assets/Neurolaxx.mp4';
 import clinicTourVideo from '../assets/Clinic_walkthrough_video_tour_1080p_20260921124708.mp4';
 import clinicImg from '../assets/images/clinic.jpg';
@@ -65,13 +65,10 @@ export default function Home() {
       {/* ---- Hero ---- */}
       <section className="home-hero" id="home-hero">
         <div className="home-hero-bg">
-          <video
-            className="home-hero-video"
-            src={heroVideo}
-            autoPlay
-            loop
-            muted
-            playsInline
+          <img
+            className="home-hero-img"
+            src={heroImg}
+            alt="Ayurvedic treatments and natural wellness"
           />
           <div className="home-hero-overlay" />
         </div>
