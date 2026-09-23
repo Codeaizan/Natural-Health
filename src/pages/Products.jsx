@@ -2,7 +2,7 @@ import { useState } from 'react';
 import HeroBanner from '../components/HeroBanner';
 import AnimatedSection from '../components/AnimatedSection';
 import { allProducts as products, categories } from '../data/products';
-import productsCollectionImg from '../assets/images/products-collection.jpg';
+import productsCollectionImg from '../assets/images/home-hero.jpg';
 import { FaLeaf } from 'react-icons/fa';
 import './Products.css';
 
