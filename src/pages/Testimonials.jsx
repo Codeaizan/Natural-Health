@@ -8,7 +8,6 @@ import './Testimonials.css';
 const stats = [
   { value: '10,000+', label: 'Happy Patients', icon: '😊' },
   { value: '15+', label: 'Years of Trust', icon: '🏆' },
-  { value: '95%', label: 'Success Rate', icon: '📈' },
   { value: '4.9/5', label: 'Average Rating', icon: '⭐' },
 ];
 

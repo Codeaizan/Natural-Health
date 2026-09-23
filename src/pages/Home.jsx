@@ -33,7 +33,6 @@ const features = [
 const stats = [
   { value: '5,000+', label: 'Patients Treated' },
   { value: '15+', label: 'Years Experience' },
-  { value: '95%', label: 'Success Rate' },
   { value: '60+', label: 'Herbal Products' },
 ];
 
@@ -232,9 +231,7 @@ export default function Home() {
                   <div className="treatment-preview-content">
                     <h4>{t.name}</h4>
                     <p>{t.description.slice(0, 80)}...</p>
-                    <span className="treatment-preview-rate">
-                      <FaCheckCircle /> {t.successRate} success rate
-                    </span>
+
                   </div>
                   <FaArrowRight className="treatment-preview-arrow" />
                 </Link>

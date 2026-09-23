@@ -120,16 +120,7 @@ export default function WhyUs() {
                             ))}
                           </ul>
                         </div>
-                        <div className="treatment-success">
-                          <span className="success-label">Success Rate</span>
-                          <div className="success-bar">
-                            <div
-                              className="success-fill"
-                              style={{ width: t.successRate }}
-                            />
-                          </div>
-                          <span className="success-value">{t.successRate}</span>
-                        </div>
+
                       </div>
                     </div>
                   )}
