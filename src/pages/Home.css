@@ -158,6 +158,10 @@
 }
 
 /* ---- About Preview ---- */
+#about-preview {
+  background-color: var(--primary-green-light);
+}
+
 .about-preview-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
