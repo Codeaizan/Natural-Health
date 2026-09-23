@@ -291,41 +291,25 @@ export default function Home() {
               </div>
             </AnimatedSection>
 
-            {/* Karishmai Oil — Image Card (from data) */}
-            <AnimatedSection delay={0.15}>
-              <div className="product-preview-card card" id={`product-preview-${featuredProducts[0].id}`}>
-                <div className="product-preview-image">
-                  <img src={featuredProducts[0].image} alt={featuredProducts[0].name} />
-                  {featuredProducts[0].badge && <span className="product-badge">{featuredProducts[0].badge}</span>}
-                </div>
-                <div className="product-preview-info">
-                  <span className="product-category">{featuredProducts[0].category}</span>
-                  <h4>{featuredProducts[0].name}</h4>
-                  <p>{featuredProducts[0].description}</p>
-                  <div className="product-preview-footer">
-                    <Link to="/products" className="btn btn-secondary btn-sm">View Details</Link>
+            {/* Featured Product Cards (from data) */}
+            {featuredProducts.slice(0, 2).map((product, idx) => (
+              <AnimatedSection key={product.id} delay={(idx + 1) * 0.15}>
+                <div className="product-preview-card card" id={`product-preview-${product.id}`}>
+                  <div className="product-preview-image">
+                    <img src={product.image} alt={product.name} />
+                    {product.badge && <span className="product-badge">{product.badge}</span>}
+                  </div>
+                  <div className="product-preview-info">
+                    <span className="product-category">{product.category}</span>
+                    <h4>{product.name}</h4>
+                    <p>{product.description}</p>
+                    <div className="product-preview-footer">
+                      <Link to="/products" className="btn btn-secondary btn-sm">View Details</Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </AnimatedSection>
-
-            {/* Diabo Guard — Image Card (from data) */}
-            <AnimatedSection delay={0.3}>
-              <div className="product-preview-card card" id={`product-preview-${featuredProducts[1].id}`}>
-                <div className="product-preview-image">
-                  <img src={featuredProducts[1].image} alt={featuredProducts[1].name} />
-                  {featuredProducts[1].badge && <span className="product-badge">{featuredProducts[1].badge}</span>}
-                </div>
-                <div className="product-preview-info">
-                  <span className="product-category">{featuredProducts[1].category}</span>
-                  <h4>{featuredProducts[1].name}</h4>
-                  <p>{featuredProducts[1].description}</p>
-                  <div className="product-preview-footer">
-                    <Link to="/products" className="btn btn-secondary btn-sm">View Details</Link>
-                  </div>
-                </div>
-              </div>
-            </AnimatedSection>
+              </AnimatedSection>
+            ))}
           </div>
 
           <AnimatedSection>

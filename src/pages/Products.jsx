@@ -51,7 +51,7 @@ export default function Products() {
           {/* Product Grid */}
           <div className="products-grid">
             {filteredProducts.map((product, i) => (
-              <AnimatedSection key={product.id} delay={i * 0.1}>
+              <AnimatedSection key={product.id} delay={Math.min(i * 0.08, 0.4)}>
                 <div className="product-card card" id={`product-${product.id}`}>
                   <div className="product-card-image">
                     <img src={product.image} alt={product.name} />

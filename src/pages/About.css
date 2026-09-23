@@ -200,7 +200,8 @@
   }
 
   .doctor-image {
-    height: 400px;
+    height: auto;
+    max-height: 400px;
   }
 
   .doctor-image-accent {

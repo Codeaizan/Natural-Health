@@ -213,6 +213,11 @@
 @media (max-width: 1024px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+    row-gap: var(--space-2xl);
+  }
+
+  .footer-brand-col {
+    grid-column: 1 / -1;
   }
 }
 

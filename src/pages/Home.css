@@ -140,16 +140,8 @@
   margin-bottom: var(--space-sm);
 }
 
-#feature-card-0 {
-  background-color: var(--warm-ivory);
-}
-
-#feature-card-1 {
-  background-color: var(--cream);
-}
-
-#feature-card-2 {
-  background-color: #f1f4ec;
+.feature-card {
+  background-color: var(--white);
 }
 
 .feature-card p {
@@ -236,7 +228,7 @@
 .product-preview-image {
   position: relative;
   overflow: hidden;
-  height: 260px;
+  aspect-ratio: 1 / 1;
 }
 
 .product-preview-image img {
@@ -578,7 +570,7 @@
 /* ---- Contact Grid ---- */
 .contact-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-xl);
 }
 
@@ -622,7 +614,7 @@
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
   .contact-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .treatments-preview-grid {
@@ -659,5 +651,9 @@
 
   .treatments-preview-grid {
     grid-template-columns: 1fr;
+  }
+
+  .product-preview-image {
+    aspect-ratio: 4 / 3;
   }
 }
