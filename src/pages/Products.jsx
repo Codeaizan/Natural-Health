@@ -67,9 +67,15 @@ export default function Products() {
                     <h3>{product.name}</h3>
                     <p>{product.description}</p>
                     <div className="product-card-footer">
-                      <button className="btn btn-primary btn-sm" id={`inquire-${product.id}`}>
+                      <a 
+                        href={`https://wa.me/919007697503?text=${encodeURIComponent(`Hi, I would like to inquire about the product: ${product.name}`)}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-primary btn-sm" 
+                        id={`inquire-${product.id}`}
+                      >
                         Inquire Now
-                      </button>
+                      </a>
                     </div>
                   </div>
                 </div>
