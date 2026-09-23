@@ -6,7 +6,7 @@ import clinicImg from '../assets/images/clinic.jpg';
 import './Testimonials.css';
 
 const stats = [
-  { value: '10,000+', label: 'Happy Patients', icon: '😊' },
+  { value: '5000+', label: 'Happy Patients', icon: '😊' },
   { value: '15+', label: 'Years of Trust', icon: '🏆' },
   { value: '4.9/5', label: 'Average Rating', icon: '⭐' },
 ];
