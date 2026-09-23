@@ -79,10 +79,6 @@ export default function Home() {
             transition={{ duration: 0.9, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
             <h1>Heal at the Root,<br />Not Just the <span className="text-accent">Symptom</span></h1>
-            <p className="home-hero-subtitle">
-              Pure Ayurvedic formulations crafted from hand-selected herbs{' '}
-              <span className="text-accent">from across the world</span>.
-            </p>
             <div className="home-hero-actions">
               <Link to="/book-appointment" className="btn btn-primary btn-lg" id="hero-book-btn">
                 Book Consultation
