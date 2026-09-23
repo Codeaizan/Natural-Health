@@ -1,4 +1,4 @@
-import { FaGraduationCap, FaAward, FaHeartbeat, FaUsers, FaLeaf, FaBookOpen } from 'react-icons/fa';
+import { FaGraduationCap, FaAward, FaHeartbeat, FaUsers, FaLeaf, FaBookOpen, FaIndustry, FaBoxOpen } from 'react-icons/fa';
 import HeroBanner from '../components/HeroBanner';
 import AnimatedSection from '../components/AnimatedSection';
 import clinicImg from '../assets/images/clinic.jpg';
@@ -6,12 +6,15 @@ import doctorImg from '../assets/images/doctor-shakir.jpg';
 import './About.css';
 
 const milestones = [
-  { year: '2005', title: 'The Beginning', description: 'Dr. Shakir Rashid completed his BAMS degree and began his journey into Ayurvedic medicine, deeply inspired by his family\'s tradition of herbal healing.', icon: <FaGraduationCap /> },
-  { year: '2008', title: 'Advanced Studies', description: 'Completed MD in Ayurveda with specialization in Kayachikitsa (Internal Medicine). Trained under renowned Vaidyas in Kerala for Panchakarma therapies.', icon: <FaBookOpen /> },
-  { year: '2012', title: 'Clinic Founded', description: 'Natural Health World was established with a vision to make authentic Ayurvedic treatment accessible to everyone. Started with a small clinic and a big dream.', icon: <FaLeaf /> },
-  { year: '2016', title: 'Product Line Launch', description: 'Launched our own range of premium Ayurvedic formulations, handcrafted with herbs sourced from trusted organic farms across India.', icon: <FaHeartbeat /> },
-  { year: '2020', title: 'Recognition', description: 'Received the Excellence in Ayurvedic Practice award. Expanded to online consultations, helping patients across India and abroad.', icon: <FaAward /> },
-  { year: '2024', title: '5,000+ Patients', description: 'Crossed the milestone of treating over 5,000 patients. Expanded clinic with modern diagnostic facilities while keeping Ayurvedic traditions alive.', icon: <FaUsers /> },
+  { year: '2011', title: 'Started the Clinic', description: 'Natural Health World was founded with a vision to bring authentic Ayurvedic and Unani healing to Kolkata. Dr. Shakir Rashid started the clinic and began his mission of natural healthcare.', icon: <FaLeaf /> },
+  { year: '2015', title: 'Launched Karishmai Oil', description: 'Our flagship product, Karishmai Oil, was launched — a powerful Ayurvedic formulation that quickly gained trust among patients for its effectiveness.', icon: <FaHeartbeat /> },
+  { year: '2018', title: 'Set Up Factory', description: 'Established our own manufacturing facility to ensure the highest quality standards in every product, from sourcing raw herbs to the final formulation.', icon: <FaIndustry /> },
+  { year: '2024', title: '40+ Products Launched', description: 'Crossed the milestone of 40+ Ayurvedic products, each handcrafted with care. From Diabo Guard to Neurolaxx, our range continues to grow with the trust of thousands.', icon: <FaBoxOpen /> },
+];
+
+const achievements = [
+  { caption: 'Receiving Acknowledgement Certificate from Hamdard at WB Doctors Meet' },
+  { caption: 'With Jb. Imtiaz Sb. Registrar, State Council of Unani Medicine, WB' },
 ];
 
 const values = [
@@ -98,8 +101,8 @@ export default function About() {
           <AnimatedSection>
             <div className="section-header">
               <span className="badge">Our Journey</span>
-              <h2>The Story of Natural Health World</h2>
-              <p>From a small clinic to a trusted name in Ayurvedic wellness</p>
+              <h2>Journey So Far</h2>
+              <p>From a small clinic to a trusted name in Ayurvedic and Unani healthcare</p>
             </div>
           </AnimatedSection>
 
@@ -119,6 +122,23 @@ export default function About() {
               </AnimatedSection>
             ))}
           </div>
+
+          {/* Achievements */}
+          <AnimatedSection>
+            <div className="achievements-section">
+              <h3 className="achievements-heading">Achievements & Recognition</h3>
+              <div className="achievements-grid">
+                {achievements.map((a, i) => (
+                  <div className="achievement-card card" key={i}>
+                    <div className="achievement-icon">
+                      <FaAward />
+                    </div>
+                    <p className="achievement-caption">{a.caption}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
