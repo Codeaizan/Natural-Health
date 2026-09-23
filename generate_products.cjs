@@ -1,21 +1,13 @@
 const fs = require('fs');
-const products = [
-  'Aloe Moringa.jpg', 'Aloe Vera capsule.jpg', 'Amla capsule.jpg', 'Ashwagandha.jpg',
-  'Azicool.jpg', 'Azma care plus.jpg', 'Calcium and vitamins.jpg', 'Cramps Nil.jpg',
-  'Cystocare.jpg', 'Diabo Guard.jpg', 'Femalotone.jpg', 'Giloy.jpg', 'Glucosamine.jpg',
-  'Heart Care Plus.jpg', 'Karishmai Capsule.jpg', 'Karishmai Oil.jpg', 'Kesh Vedika.jpg',
-  'Livo Amrit.jpg', 'Man O Maxx.jpg', 'Neem capsules.jpg', 'Neurolaxx.jpg',
-  'Ortho care plus.jpg', 'Paurush Shakti Awaleh.jpg', 'Pilexomed.jpg', 'Play Maxx Gold.jpg',
-  'Play Maxx Oil.jpg', 'Relaxiwave.jpg', 'Shakit Wardaan Gold Capsule.jpg', 'Shaktiwardaan.jpg',
-  'Sllim Youu.jpg', 'Spirulina.jpg', 'Spondylimed.jpg', 'Stoma fine.jpg', 'Thyrelle.jpg',
-  'Time O Maxx.jpg', 'Tulsi Capsules.jpg', 'Uresdi capsule.jpg', 'Urinexa.jpg', 'Uterexne.jpg'
-];
+
+const productsDir = 'd:/Projects/NHW/src/assets/images/products_enhanced';
+const products = fs.readdirSync(productsDir).filter(file => file.endsWith('.jpg') || file.endsWith('.jpeg'));
 
 let imports = '';
 let items = '';
 
 products.forEach((filename, i) => {
-  const name = filename.replace('.jpg', '');
+  const name = filename.replace(/\.jpe?g$/, '');
   const varName = 'img' + i;
   imports += `import ${varName} from '../assets/images/products_enhanced/${filename}';\n`;
   
