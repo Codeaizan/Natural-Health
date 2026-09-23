@@ -27,6 +27,11 @@
   /* Typography */
   --font-heading: 'Philosopher', serif;
   --font-body: 'DM Sans', sans-serif;
+  --font-brand: 'Luckiest Guy', cursive;
+
+  /* Brand Colors (from CDR/PDF branding) */
+  --brand-green: #1B7A1E;
+  --brand-green-dark: #0E5C12;
 
   /* Spacing */
   --space-xs: 0.25rem;

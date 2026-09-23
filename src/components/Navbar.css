@@ -60,31 +60,34 @@
 }
 
 .navbar-brand-name {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 1.15rem;
+  font-family: var(--font-brand);
+  font-weight: 400;
+  font-size: 1.2rem;
   color: var(--white);
-  line-height: 1.2;
+  line-height: 1.1;
   transition: color var(--transition-base);
   text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
 .navbar-scrolled .navbar-brand-name {
-  color: var(--heading-color);
+  color: var(--brand-green);
   text-shadow: none;
 }
 
 .navbar-brand-tagline {
-  font-size: 0.7rem;
-  color: rgba(255,255,255,0.75);
-  letter-spacing: 0.1em;
+  font-family: var(--font-brand);
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 400;
   transition: color var(--transition-base);
 }
 
 .navbar-scrolled .navbar-brand-tagline {
-  color: var(--primary-green);
+  color: var(--brand-green-dark);
 }
 
 /* Links */

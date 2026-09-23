@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaLeaf, FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaFacebook, FaYoutube, FaWhatsapp } from 'react-icons/fa';
-import logoImg from '../assets/images/logo.jpg';
+import logoImg from '../assets/images/logo.png';
 import './Footer.css';
 
 const quickLinks = [
@@ -45,7 +45,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <h3>Natural Health World</h3>
-                  <span className="footer-tagline">Ayurvedic Wellness</span>
+                  <span className="footer-tagline">The Herbal Healing</span>
                 </div>
               </Link>
               <p className="footer-desc">
