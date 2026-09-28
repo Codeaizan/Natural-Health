@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FaStar, FaQuoteLeft } from 'react-icons/fa';
 import HeroBanner from '../components/HeroBanner';
 import AnimatedSection from '../components/AnimatedSection';
@@ -95,9 +96,9 @@ export default function Testimonials() {
             <div className="testimonial-cta-content">
               <h2>Your Healing Story Could Be Next</h2>
               <p>Join thousands of patients who have found relief and wellness through our Ayurvedic treatments.</p>
-              <a href="/book-appointment" className="btn btn-primary btn-lg">
+              <Link to="/book-appointment" className="btn btn-primary btn-lg">
                 Start Your Journey Today
-              </a>
+              </Link>
             </div>
           </AnimatedSection>
         </div>
