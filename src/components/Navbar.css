@@ -61,12 +61,12 @@
 
 .navbar-brand-name {
   font-family: var(--font-brand);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 1.2rem;
-  color: var(--brand-green);
+  color: var(--white);
   line-height: 1.1;
   transition: color var(--transition-base);
-  text-shadow: none;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
   text-transform: uppercase;
   letter-spacing: 0.02em;
 }
@@ -79,10 +79,10 @@
 .navbar-brand-tagline {
   font-family: var(--font-brand);
   font-size: 0.72rem;
-  color: var(--brand-green);
+  color: rgba(255,255,255,0.85);
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 400;
   transition: color var(--transition-base);
 }
 
