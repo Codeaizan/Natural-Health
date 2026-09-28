@@ -32,7 +32,7 @@
 }
 
 .footer-brand h3 {
-  font-family: var(--font-brand);
+  font-family: "Knewave", cursive;
   color: var(--white);
   font-size: 1.2rem;
   font-weight: 400;
@@ -55,7 +55,7 @@
 }
 
 .footer-tagline {
-  font-family: var(--font-brand);
+  font-family: "Knewave", cursive;
   font-size: 0.72rem;
   color: var(--sand);
   letter-spacing: 0.04em;
