@@ -25,21 +25,18 @@
 
 /* Brand */
 .footer-brand {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin-bottom: var(--space-lg);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
 }
 
 .footer-logo-full {
-  height: 44px;
+  height: 38px;
   width: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  transition: filter var(--transition-fast);
-}
-
-.footer-brand:hover .footer-logo-full {
-  filter: brightness(0) invert(1) drop-shadow(0 0 4px rgba(255,255,255,0.3));
 }
 
 .footer-desc {
