@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { HiMenu, HiX } from 'react-icons/hi';
-import logoImg from '../assets/images/logo.png';
+import logoFullImg from '../assets/images/logo-full.jpg';
 import './Navbar.css';
 
 const navLinks = [
@@ -38,13 +38,7 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`} id="navbar">
       <div className="container navbar-inner">
         <Link to="/" className="navbar-brand" id="nav-logo">
-          <div className="navbar-logo">
-            <img src={logoImg} alt="Natural Health World Logo" className="navbar-logo-img" />
-          </div>
-          <div className="navbar-brand-text">
-            <span className="navbar-brand-name">Natural Health World</span>
-            <span className="navbar-brand-tagline">The Herbal Healing</span>
-          </div>
+          <img src={logoFullImg} alt="Natural Health World — The Herbal Healing" className="navbar-logo-full" />
         </Link>
 
         <div className={`navbar-links ${isOpen ? 'navbar-links-open' : ''}`}>

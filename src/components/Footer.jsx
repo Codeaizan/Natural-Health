@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FaLeaf, FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaFacebook, FaYoutube, FaWhatsapp } from 'react-icons/fa';
-import logoImg from '../assets/images/logo.png';
+import logoFullImg from '../assets/images/logo-full.jpg';
 import './Footer.css';
 
 const quickLinks = [
@@ -40,13 +40,7 @@ export default function Footer() {
             {/* Brand Column */}
             <div className="footer-brand-col">
               <Link to="/" className="footer-brand">
-                <div className="footer-logo">
-                  <img src={logoImg} alt="Natural Health World" className="footer-logo-img" />
-                </div>
-                <div>
-                  <h3>Natural Health World</h3>
-                  <span className="footer-tagline">The Herbal Healing</span>
-                </div>
+                <img src={logoFullImg} alt="Natural Health World — The Herbal Healing" className="footer-logo-full" />
               </Link>
               <p className="footer-desc">
                 Rooted in ancient Ayurvedic wisdom and guided by modern science, we bring you natural healing solutions for a healthier, balanced life.
