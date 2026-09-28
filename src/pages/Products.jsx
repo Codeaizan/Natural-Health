@@ -100,22 +100,18 @@ export default function Products() {
               <h2>Our Quality Promise</h2>
               <div className="quality-grid">
                 <div className="quality-item">
-                  <span className="quality-icon">🌿</span>
                   <h4>100% Natural</h4>
                   <p>Every ingredient is sourced from nature. No synthetic chemicals or artificial additives.</p>
                 </div>
                 <div className="quality-item">
-                  <span className="quality-icon">🧪</span>
                   <h4>Lab Tested</h4>
                   <p>Each batch undergoes rigorous quality testing for purity, potency, and safety.</p>
                 </div>
                 <div className="quality-item">
-                  <span className="quality-icon">📜</span>
                   <h4>Classical Formulas</h4>
                   <p>Based on time-tested Ayurvedic texts with formulations refined over centuries.</p>
                 </div>
                 <div className="quality-item">
-                  <span className="quality-icon">🤝</span>
                   <h4>Ethical Sourcing</h4>
                   <p>Herbs sourced from trusted organic farms with sustainable and fair practices.</p>
                 </div>

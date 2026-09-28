@@ -28,7 +28,6 @@ export default function Testimonials() {
             <div className="testimonial-stats-grid">
               {stats.map((s, i) => (
                 <div key={i} className="testimonial-stat-card" id={`stat-${i}`}>
-                  <span className="stat-icon">{s.icon}</span>
                   <strong className="stat-value">{s.value}</strong>
                   <span className="stat-label">{s.label}</span>
                 </div>

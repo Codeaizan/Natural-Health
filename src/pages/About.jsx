@@ -149,7 +149,6 @@ export default function About() {
             {values.map((v, i) => (
               <AnimatedSection key={i} delay={i * 0.15}>
                 <div className="value-card card" id={`value-${i}`}>
-                  <span className="value-emoji">{v.icon}</span>
                   <h3>{v.title}</h3>
                   <p>{v.description}</p>
                 </div>
