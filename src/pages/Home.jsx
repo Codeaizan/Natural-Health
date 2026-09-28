@@ -3,7 +3,7 @@ import { FaLeaf, FaUserMd, FaFlask, FaStar, FaArrowRight, FaPhone, FaEnvelope, F
 import { GiLungs, GiStomach, GiHealing, GiHerbsBundle, GiBrain, GiMedicines } from 'react-icons/gi';
 import { motion } from 'framer-motion';
 import AnimatedSection from '../components/AnimatedSection';
-import heroImg from '../assets/images/home-hero.jpg';
+import heroImg from '../assets/images/new-hero-bg.jpeg';
 import neurolaxxVideo from '../assets/Neurolaxx.mp4';
 import clinicImg from '../assets/images/clinic.jpg';
 import doctorImg from '../assets/images/doctor-shakir.jpg';

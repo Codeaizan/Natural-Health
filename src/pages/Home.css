@@ -62,6 +62,18 @@
   background-clip: text;
 }
 
+#hero-book-btn {
+  background: linear-gradient(135deg, var(--sand), #e8dcc8);
+  color: var(--dark-green);
+  border: none;
+}
+
+#hero-book-btn:hover {
+  background: linear-gradient(135deg, #e8dcc8, var(--sand));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 .home-hero-subtitle {
   color: rgba(247, 245, 239, 0.85) !important;
   font-size: 1.1rem;
@@ -141,7 +153,7 @@
 }
 
 .feature-card {
-  background-color: var(--white);
+  background-color: #ADBC9F;
 }
 
 .feature-card p {
